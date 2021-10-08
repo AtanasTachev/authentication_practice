@@ -8,7 +8,7 @@ const initDatabase = require('./config/database');
 require('./config/express')(app);
 app.use(express.urlencoded({extended: false}));
 
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 const path = require('path');
 require('dotenv/config');
 
