@@ -1,0 +1,25 @@
+<main>
+  <h1>
+    {{#if title}}
+      {{title}}
+    {{else}}
+      BROWSER
+    {{/if}}
+  </h1>
+  <form action="/search" method="GET">
+    <input type="text" class="search" name="search" placeholder="Search..." value="{{search}}">
+    <input type="number" name="from" class="age" placeholder="from age ..." value={{from}}>
+    <span>-</span>
+    <input type="number" name="to" class="age" placeholder="to age ..." value={{to}}>
+    <input type="submit" value="search">
+  </form>
+
+  <div class="toys">
+    {{#each toys}}
+      {{> toy}}
+    {{else}}
+      <p>No results to show</p>
+    {{/each}}
+  </div>
+
+</main>

@@ -15,7 +15,7 @@ img {
     width: auto;
 }
 
-img.cube {
+img.toy {
     display: block;
     margin: 0 auto;
     text-align: center;
@@ -177,7 +177,7 @@ textarea {
     margin: 8px 0 2em;
 }
 
-input.difficulty {
+input.age {
     width: 20%;
 }
 
