@@ -7,7 +7,7 @@ const toySchema = new mongoose.Schema({
     },
     description: {
         type:String,
-        maxlength: 25,
+        maxlength: 150,
         required: true
     },
     imageUrl: {
@@ -15,7 +15,7 @@ const toySchema = new mongoose.Schema({
         required: true,
         validate: [/^https?:\/\//i, 'invalid image url']
     },
-    yearsOfAge: {
+    age: {
         type: String,
         required: true
     }
