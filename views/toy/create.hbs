@@ -1,0 +1,23 @@
+<main>
+  <h1>Create</h1>
+  <div class="form">
+    <form action='/toy/create' method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name">
+      <label for="name">Description</label>
+      <textarea id="name" name="description"></textarea>
+      <label for="image">ImageUrl</label>
+      <input type="text" id="image" name="imageUrl">
+      <label for="age">Age</label>
+      <select id="age" name="age">
+        <option value="1">1 - 0-6 months</option>
+        <option value="2">2 - 6-12 months</option>
+        <option value="3">3 - 0-3 years</option>
+        <option value="4">4 - 3-6 years</option>
+        <option value="5">5 - 6-9 years</option>
+        <option value="6">6 - 9-12 years</option>
+      </select>
+      <input type="submit" value="Create">
+    </form>
+  </div>
+</main>
