@@ -10,7 +10,12 @@ const home = async (req, res) => {
     res.render('index', {toys});
 }
 
+const about = (req, res) => {
+    res.render('about');
+}
+
 
 router.get('/', home);
+router.get('/about', about)
 
 module.exports = router;
