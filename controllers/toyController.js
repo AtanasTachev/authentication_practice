@@ -1,5 +1,5 @@
 const router = require('express').Router();
-
+const { isAuth } = require('../middlewares/authmiddleware')
 const toyService = require('../services/toyService');
 
 const getCreateToyView = (req, res) => {
@@ -17,7 +17,7 @@ const createToy = async(req, res) => {
     }
 }
 
-router.get('/create', getCreateToyView);
+router.get('/create', isAuth, getCreateToyView);
 router.post('/create', createToy)
 
 module.exports = router;
