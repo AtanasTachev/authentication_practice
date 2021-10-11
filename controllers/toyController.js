@@ -16,8 +16,13 @@ const createToy = async(req, res) => {
         res.status(400).send(err.message).end();
     }
 }
+const toyDetails = async (req, res) => {
+    let toy = await toyService.getOne(req.params.toyId);
+    res.render('toy/details', { ...toy } );
+}
 
 router.get('/create', isAuth, getCreateToyView);
-router.post('/create', createToy)
+router.post('/create', isAuth, createToy);
+router.get('/:toyId', toyDetails);
 
 module.exports = router;
