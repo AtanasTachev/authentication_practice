@@ -29,10 +29,10 @@ const renderEditToyView = async (req, res) => {
 const postEditToyView = async (req, res) => {
     let { name, description, imageUrl, age } = req.body;
 
-    await toyService.updateOne(req.params.toyId, [name, description, imageUrl, age]);
+    await toyService.updateOne(req.params.toyId, {name, description, imageUrl, age});
 
-    res.redirect(`toy/${req.params.toyId}`);
-}
+    res.redirect(`/toy/${req.params.toyId}`);
+};
  
 router.get('/create', isAuth, getCreateToyView);
 router.post('/create', isAuth, createToy);

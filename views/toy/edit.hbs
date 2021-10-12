@@ -1,7 +1,7 @@
 <main>
     <h1>Edit Toy</h1>
     <div class="form">
-        <form action="/cube/{{_id}}/edit" method="POST">
+        <form action="/toy/{{_id}}/edit" method="POST">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" value="{{name}}">
             <label for="description">Description</label>
@@ -23,6 +23,6 @@
 </main>
 
 <script>
-    { { !--Dirty Hack-- } }
+  // Dirty Hack
     document.getElementById('age').value = {{ age }}
 </script>
