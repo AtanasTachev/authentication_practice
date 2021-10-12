@@ -17,7 +17,7 @@ const create = (name, description, imageUrl, age) => {
 
 const deleteOne = (toyId) => Toy.findOneAndDelete(toyId);
 
-const updateOne = (toyId) => Toy.findOneAndUpdate(toyId);
+const updateOne = (toyId, toy) => Toy.findOneAndUpdate(toyId, toy, { runValidators: true });
 
 const toyService = {
     getAll,

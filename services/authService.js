@@ -26,4 +26,4 @@ exports.login = function (username, password) {
             username: user.username
         }
         return jwtSign(payload, SECRET);     
-    }
+    };

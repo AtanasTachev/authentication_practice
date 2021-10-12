@@ -19,7 +19,7 @@ exports.auth = function (req, res, next) {
 
 exports.isAuth = function (req, res, next) {
     if (!req.user) {
-        return res.status(401).redirect('/register');
+        return res.status(401).redirect('/login');
     }
     next();
 }
