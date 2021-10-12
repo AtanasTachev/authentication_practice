@@ -15,10 +15,16 @@ const create = (name, description, imageUrl, age) => {
     return toy.save();
 }
 
+const deleteOne = (toyId) => Toy.findOneAndDelete(toyId);
+
+const updateOne = (toyId) => Toy.findOneAndUpdate(toyId);
+
 const toyService = {
     getAll,
     getOne,
     create,
+    deleteOne,
+    updateOne
 }
 
 module.exports = toyService;
