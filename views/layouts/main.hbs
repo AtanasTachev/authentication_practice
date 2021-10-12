@@ -15,13 +15,13 @@
                 <li><img class="logo" src="/images/logo.png"></li>
                 <li><a href="/">Browse</a></li>
                 <li><a href="/about">About</a></li>
-                {{!-- {{#if isAuth}} --}}
+                {{#if user}}
                 <li><a href="/toy/create">Add a Toy</a></li>
                 <li><a href="/logout">Logout</a></li>
-                {{!-- {{else}} --}}
+                {{else}}
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
-                {{!-- {{/if}} --}}
+                {{/if}}
             </ul>
         </header>
 
