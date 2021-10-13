@@ -47,6 +47,11 @@ const postEditToyView = async (req, res) => {
 const renderDeleteCubeView = async (req, res) => {
     res.render('toy/delete', req.toy);
 };
+
+const postDeleteToyView = async(rew, res) => {
+    await toyService.deleteOne(req.params.toyId);
+    res.redirect('/');
+}
  
 router.get('/create', isAuth, getCreateToyView);
 router.post('/create', isAuth, createToy);
@@ -54,5 +59,6 @@ router.get('/:toyId', toyDetails);
 router.get('/:toyId/edit', isAuth, isOwnToy, renderEditToyView);
 router.post('/:toyId/edit', isAuth, isOwnToy,  postEditToyView);
 router.get('/:toyId/delete', isAuth, isOwnToy, renderDeleteCubeView);
+router.post('/:toyId/delete', isAuth, isOwnToy, postDeleteToyView);
 
 module.exports = router;
