@@ -18,6 +18,10 @@ const toySchema = new mongoose.Schema({
     age: {
         type: String,
         required: true
+    },
+    creator: {
+        type: mongoose.Types.ObjectId,
+        ref: 'User'
     }
 })
 

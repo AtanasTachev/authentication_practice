@@ -5,7 +5,9 @@
         <p><span>Description:</span>{{description}}</p>
         <p><span>Age:</span> {{age}}</p>
         <a class="btn" href="/">Back</a>
+        {{#if isOwn}}
         <a class="btn" href="/toy/{{_id}}/edit">Edit</a>
         <a class="btn" href="/toy/{{_id}}/delete">Delete</a>
+        {{/if}}
     </div>
 </main>

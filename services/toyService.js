@@ -4,12 +4,13 @@ const getAll = () => Toy.find({}).lean();
 
 const getOne = (id) => Toy.findById(id).lean();
 
-const create = (name, description, imageUrl, age) => {
+const create = (name, description, imageUrl, age, userId) => {
     let toy = new Toy ({
         name, 
         description, 
         imageUrl, 
-        age
+        age,
+        creator: userId
     });
     
     return toy.save();
